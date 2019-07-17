@@ -18,9 +18,10 @@ const bookSchema = new mongoose.Schema({
 	},
 	createdAt: {
 		type: Date,
-		require: true
+		require: true,
+		default: Date.now
 	},
-	coverImageNmae: {
+	coverImageName: {
 		type: String,
 		required: true
 	},

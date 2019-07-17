@@ -3,9 +3,9 @@ const router = express.Router();
 const Book = require('../models/book');
 const Authors = require('../models/author');
 
-// All Authors Route
+// All Books Route
 router.get('/', async (req, res) => {
-	res.send('All Books');
+	res.render('books/index');
 });
 
 // New Book Route
