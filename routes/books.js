@@ -36,6 +36,12 @@ router.post('/', upload.single('cover'), async (req, res) => {
 	});
 
 	try {
+		console.log('Title: ' + req.body.title);
+		console.log('Author: ' + req.body.author);
+		console.log('Publish Date: ' + req.body.publishDate);
+		console.log('Page Count: ' + req.body.pageCount);
+		console.log('Description: ' + req.body.description);
+		console.log('Filename: ' + fileName);
 		const newBook = await book.save();
 		//res.redirect(`books/${newBook.id}`)
 		res.redirect('books');
