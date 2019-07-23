@@ -1,0 +1,21 @@
+:::INITIAL SETUP::::
+npm init
+npm i --save-dev nodemon dotenv
+npm i express ejs
+
+:::MONGODB SETUP::::
+npm i mongoose
+
+:::BODY PARSER:::
+npm i body-parser
+
+:::MULTI PART FORMS:::
+npm i multer
+
+:::FILDPOND:::
+npm i filepond --save
+npm i filepond-plugin-file-encode filepond-plugin-image-preview filepond-plugin-image-resize --save
+
+:::PASSWORD ::::
+npm i bcrypt
+npm i passport passport-local express-session express-flash
