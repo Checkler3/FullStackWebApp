@@ -2,6 +2,7 @@
 npm init
 npm i --save-dev nodemon dotenv
 npm i express ejs
+npm i method-override
 
 :::MONGODB SETUP::::
 npm i mongoose
