@@ -1,0 +1,27 @@
+:root {
+	--color-btn-primary-background: #8596a6;
+	--color-btn-primary-text: white;
+	--color-btn-border: black;
+	--color-btn-danger-background: #a61b0f;
+}
+
+.btn {
+	border: 1 px solid var(--color-btn-border);
+	border-radius: 0.5rem;
+	padding: 0.5rem 1rem;
+	font-size: 1.2rem;
+	font-family: 'Raleway', sans-serif;
+	cursor: pointer;
+	text-decoration: none;
+	text-align: center;
+}
+
+.btn-primary {
+	color: var(--color-btn-primary-text);
+	background-color: var(--color-btn-primary-background);
+}
+
+.btn-danger {
+	color: var(--color-btn-primary-text);
+	background-color: var(--color-btn-danger-background);
+}

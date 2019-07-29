@@ -9,8 +9,11 @@
 
 <% authors.forEach(author => { %>
     <div><%= author.name %></div>
-    <a href="/authors/<%= author.id %>">View</a>
-    <a href="/authors/<%= author.id %>/edit">Edit</a>
-    <%- include('../partials/delete_form',
-                { url: `/authors/${author.id}` }) %>
+    <a class='btn btn-primary' href="/authors/<%= author.id %>">View</a>
+    <a class='btn btn-primary' href="/authors/<%= author.id %>/edit">Edit</a>
+    <div class='btn btn-danger'>
+        <%- include('../partials/delete_form',
+                    { url: `/authors/${author.id}` }) %>
+    </div>
+    
 <% }) %>
