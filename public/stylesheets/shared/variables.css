@@ -1,5 +1,16 @@
-:root {
+/* :root {
 	--color-background-dark: #d4c19f;
 	--color-background-light: #f2e2c4;
 	--color-text-light: #d96b2b;
+} */
+
+:root {
+	--color-base-hue: 86;
+	--color-danger-hue-offset: 180;
+	--color-danger-hue: calc(
+		var(--color-base-hue) - var(--color-danger-hue-offset)
+	);
+	--color-background-dark: hsl(var(--color-base-hue), 100%, 8%);
+	--color-background-light: hsl(var(--color-base-hue), 100%, 16%);
+	--color-text-light: hsl(var(--color-base-hue), 100%, 87%);
 }

@@ -15,7 +15,7 @@
 
 .header-nav li a:hover,
 .header-title:hover {
-	color: #f2ac57;
+	color: var(--color-text-light);
 }
 
 .header-nav {
