@@ -5,7 +5,7 @@
 } */
 
 :root {
-	--color-base-hue: 86;
+	--color-base-hue: 200;
 	--color-danger-hue-offset: 180;
 	--color-danger-hue: calc(
 		var(--color-base-hue) - var(--color-danger-hue-offset)
