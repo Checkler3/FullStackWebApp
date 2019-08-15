@@ -1,15 +1,19 @@
 :root {
+	/* Main Button Background color */
 	--color-btn-primary-background: hsl(var(--color-base-hue), 100%, 83%);
 	--color-btn-primary-background-dark: hsl(var(--color-base-hue), 100%, 73%);
 
+	/* Main Button Text Color */
 	--color-btn-primary-text: hsl(var(--color-base-hue), 100%, 20%);
 	--color-btn-primary-text-dark: hsl(var(--color-base-hue), 100%, 10%);
 
+	/* Danger Button */
 	--color-btn-danger-background: hsl(var(--color-danger-hue), 100%, 83%);
 	--color-btn-danger-text: black;
 	--color-btn-danger-text-dark: black;
 	--color-btn-danger-background-dark: hsl(var(--color-danger-hue), 100%, 73%);
 
+	/* Button Border */
 	--color-btn-border: black;
 }
 
