@@ -46,7 +46,8 @@ router.post('/', async (req, res) => {
 	try {
 		const newBook = await book.save();
 		res.redirect(`books/${newBook.id}`);
-	} catch {
+	} catch (e) {
+		console.log(e);
 		renderNewPage(res, book, true);
 	}
 });
@@ -126,6 +127,12 @@ async function renderEditPage(res, book, hasError = false) {
 }
 
 async function renderFormPage(res, book, form, hasError = false) {
+	console.log(book.author);
+	console.log(book.title);
+	console.log(book.publishDate);
+	console.log(book.pageCount);
+	console.log(book.description);
+	console.log(hasError);
 	try {
 		const authors = await Author.find({});
 		const params = {
@@ -146,11 +153,17 @@ async function renderFormPage(res, book, form, hasError = false) {
 }
 
 function saveCover(book, coverEncoded) {
-	if (coverEncoded == null) return;
+	if (coverEncoded == null) {
+		console.log('Cover Encoded failed');
+		return;
+	}
 	const cover = JSON.parse(coverEncoded);
 	if (cover != null && imageMimeTypes.includes(cover.type)) {
 		book.coverImage = new Buffer.from(cover.data, 'base64');
 		book.coverImageType = cover.type;
+		console.log('CoverImageType: ' + book.coverImageType);
+		console.log('CoverImage: ' + book.coverImage);
+		console.log('CoverType: ' + cover.type);
 	}
 }
 
